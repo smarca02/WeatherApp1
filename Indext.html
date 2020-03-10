@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Weather App</title>
+    <link href="stylesheet.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="WeatherBox">
+        <h1>Basic Weather App</h1> 
+      <form id="addCity">
+        <input id="inputCity" type="text" placeholder="Enter city" autofocus />
+        <button type="submit">Get weather</button>
+      </form>
+      <div class="tempNumC">
+          <h2 id="tempNum"></h2><sup>&#176C</sup>
+        </div>
+      <h3 id="tempDesc"></h3>
+    </div>
+
+    <!-- Vanilla Javascript-->
+    <script src="script.js"></script>
+    <script>
+      const addCityForm = document.getElementById("addCity");
+      const inputCityForm = document.getElementById("inputCity");
+      const tempNumApp = document.getElementById("tempNum");
+
+/* when button is clicked it does not reload the page */
+      addCityForm.addEventListener("submit", e => {
+        e.preventDefault();
+        const city = inputCityForm.value;
+        const apiKey = "cd31187148b3d7fc51c0fc8233336d87";
+        
+        /* Promise, below */
+        GETWeather(
+          city,
+          apiKey,
+
+          json => {
+            tempNumApp.innerHTML = json.main.temp;
+            tempDesc.innerHTML = json.weather[0].description;
+          },
+          error => {
+            console.log(error.message);
+          }
+        );
+      });
+    </script>
+  </body>
+</html>
