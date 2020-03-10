@@ -45,7 +45,6 @@ button {
   border: 1px solid teal;
   border-top-right-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
-  color: inherit;
 }
 
 .tempNumC {
