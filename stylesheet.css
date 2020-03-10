@@ -41,8 +41,8 @@ input {
 }
 
 button {
-  background: lightblue;
-  border: 1px solid teal;
+  background: linear-gradient(120degr, lightgreen 0%, pink 50%, lightblue 100%);
+  border: 1px solid black;
   border-top-right-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
 }
