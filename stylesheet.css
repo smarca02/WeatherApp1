@@ -30,7 +30,7 @@ button {
   outline: none;
   font-size: 1rem;
   padding: 0.5rem;
-  margin: 0;
+  margin: -1rem;
 }
 
 input {
@@ -41,10 +41,14 @@ input {
 }
 
 button {
-  background: linear-gradient(120degr, lightgreen 0%, pink 50%, lightblue 100%);
+  background: lightblue;
   border: 1px solid black;
   border-top-right-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
+}
+
+button:hover {
+  background: lightpink;
 }
 
 .tempNumC {
